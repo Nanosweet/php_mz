@@ -1,0 +1,15 @@
+# wersja konfiguracji tego obrazu
+version: '3'
+
+services:
+  #nginx
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+
+  #php
+  php:
+    build: ./php
+    volumes: 
+      - ./app:/var/www
